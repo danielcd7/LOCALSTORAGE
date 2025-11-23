@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y Registro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container" id="loginContainer">
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="loginUser" placeholder="Usuario" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="loginPass" placeholder="Contraseña" required>
+                </div>
+                <button type="submit">Ingresar</button>
+                <p class="message">¿No tienes cuenta? <a href="#" id="showRegister">Regístrate</a></p>
+            </form>
+        </div>
+
+        <div class="form-container hidden" id="registerContainer">
+            <h2>Registro</h2>
+            <form id="registerForm">
+                <div class="input-group">
+                    <input type="text" id="regUser" placeholder="Usuario (mín 3 letras)" required>
+                    <span class="error-msg" id="userError"></span>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="regEmail" placeholder="Correo Electrónico" required>
+                    <span class="error-msg" id="emailError"></span>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="regPass" placeholder="Contraseña (mín 6 caracteres)" required>
+                    <span class="error-msg" id="passError"></span>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="regPassConfirm" placeholder="Confirmar Contraseña" required>
+                    <span class="error-msg" id="passConfirmError"></span>
+                </div>
+                <button type="submit" id="btnRegister" disabled>Registrarse</button>
+                <p class="message">¿Ya tienes cuenta? <a href="#" id="showLogin">Inicia Sesión</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+</body>
+</html>

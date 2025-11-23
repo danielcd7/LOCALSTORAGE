@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Gestión</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h1>Bienvenido, <span id="userNameDisplay"></span></h1>
+        <button id="btnLogout" class="logout-btn">Salir</button>
+    </nav>
+
+    <main>
+        <section class="crud-container">
+            <h2>Gestión de Registros</h2>
+            
+            <form id="crudForm">
+                <input type="hidden" id="editIndex">
+                <div class="form-row">
+                    <div class="input-group">
+                        <input type="text" id="itemName" placeholder="Nombre Completo" required>
+                        <span class="error-msg" id="itemNameError"></span>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="itemPhone" placeholder="Teléfono (10 dígitos)" required>
+                        <span class="error-msg" id="itemPhoneError"></span>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="itemEmail" placeholder="Correo" required>
+                        <span class="error-msg" id="itemEmailError"></span>
+                    </div>
+                </div>
+                <button type="submit" id="btnSave" disabled>Guardar Registro</button>
+                <button type="button" id="btnCancel" class="hidden">Cancelar Edición</button>
+            </form>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar por nombre...">
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Teléfono</th>
+                            <th>Correo</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Integrantes: Juan Pérez, María González, Carlos López</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
